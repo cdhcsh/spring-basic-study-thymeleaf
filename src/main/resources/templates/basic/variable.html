@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="m-2 text-dark" style="text-align: center">SpringEL 표현식</h1>
+<ul class="list-group m-3"><b class="text-primary">Object</b>
+    <li class="list-group-item">${user.username} = <span th:text="${user.username}"></span></li>
+    <li class="list-group-item">${user['username']} = <span th:text="${user['username']}"></span></li>
+    <li class="list-group-item">${user.getUsername()} = <span th:text="${user.getUsername()}"></span></
+    li>
+</ul>
+<ul class="list-group m-3"><b class="text-primary">List</b>
+    <li class="list-group-item">${users[0].username} = <span th:text="${users[0].username}"></
+        span>
+    </li>
+    <li class="list-group-item">${users[0]['username']} = <span th:text="${users[0]['username']}"></
+        span>
+    </li>
+    <li class="list-group-item">${users[0].getUsername()} = <span th:text="${users[0].getUsername()}"></span></li>
+</ul>
+<ul class="list-group m-3"><b class="text-primary">Map</b>
+    <li class="list-group-item">${userMap['userA'].username} = <span th:text="${userMap['userA'].username}"></span></li>
+    <li class="list-group-item">${userMap['userA']['username']} = <span
+            th:text="${userMap['userA']['username']}"></span></li>
+    <li class="list-group-item">${userMap['userA'].getUsername()} = <span
+            th:text="${userMap['userA'].getUsername()}"></span></li>
+</ul>
+<h1 class="m-2 text-dark" style="text-align: center">지역 변수 - (th:with)</h1>
+<div th:with="first=${users[0]}">
+    <ul class="list-group m-3">
+        <li class="list-group-item">처음 사람의 이름은 <span th:text="${first.username}"></span></li>
+    </ul>
+</div>
+</body>
+</html>

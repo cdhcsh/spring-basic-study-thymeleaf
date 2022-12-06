@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h2 class="m-2 text-dark" style="text-align: center">text vs utext</h2>
+    <ul class="list-group mt-3">
+        <li class="list-group-item">th:text = <span th:text="${data}"></span></li>
+        <li class="list-group-item">th:utext = <span th:utext="${data}"></span></li>
+    </ul>
+
+    <h2 class="m-2 text-dark" style="text-align: center"><span th:inline="none">[[...]] vs [(...)]</span></h2>
+    <ul class="list-group mt-3">
+        <li class="list-group-item"><span th:inline="none">[[...]] = </span>[[${data}]]</li>
+        <li class="list-group-item"><span th:inline="none">[(...)] = </span>[(${data})]</li>
+    </ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="m-2 text-dark" style="text-align: center">리터럴</h1>
+<ul class="list-group mt-3">
+  <!--주의! 다음 주석을 풀면 예외가 발생함-->
+  <!-- <li>"hello world!" = <span th:text="hello world!"></span></li>-->
+  <li class="list-group-item">'hello' + ' world!' = <span th:text="'hello' + ' world!'"></span></li>
+  <li class="list-group-item">'hello world!' = <span th:text="'hello world!'"></span></li>
+  <li class="list-group-item">'hello ' + ${data} = <span th:text="'hello ' + ${data}"></span></li>
+  <li class="list-group-item">리터럴 대체 |hello ${data}| = <span th:text="|hello ${data}|"></span></li>
+</ul>
+</body>
+</html>

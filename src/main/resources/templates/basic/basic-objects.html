@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="m-2 text-dark" style="text-align: center">식 기본 객체 (Expression Basic Objects)</h1>
+<ul class="list-group m-3">
+    <li class="list-group-item">request = <span th:text="${#request}"></span></li>
+    <li class="list-group-item">response = <span th:text="${#response}"></span></li>
+    <li class="list-group-item">session = <span th:text="${#session}"></span></li>
+    <li class="list-group-item">servletContext = <span th:text="${#servletContext}"></span></li>
+    <li class="list-group-item">locale = <span th:text="${#locale}"></span></li>
+</ul>
+<h1 class="m-2 text-dark" style="text-align: center">편의 객체</h1>
+<ul class="list-group m-3">
+    <li class="list-group-item">Request Parameter = <span th:text="${param.paramData}"></span></li>
+    <li class="list-group-item">session = <span th:text="${session.sessionData}"></span></li>
+    <li class="list-group-item">spring bean = <span th:text="${@helloBean.hello('Spring!')}"></span></
+    li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        .container {
+            max-width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="m-2 text-dark" style="text-align: center">컨텐츠에 데이터 출력하기</h1>
+        <ul class="list-group mt-3">
+            <li class="list-group-item"><span class="text-primary" th:text="${data}">text</span></li>
+            <li class="list-group-item">컨텐츠 안에서 직접 출력하기</li>
+        </ul>
+
+    </div>
+</body>
+</html>
